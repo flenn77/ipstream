@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function GenreFilter({ onFilterChange }) {
+  const [genres, setGenres] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=64937e8ca9376b0baf3db4a6b1b7087f')
+      .then(response => response.json())
+      .then(data => setGenres(data.genres))
+      .catch(error => console.error(error));
+  }, []);
+
   const handleChange = (event) => {
     onFilterChange(event.target.value);
   };
@@ -8,10 +17,11 @@ function GenreFilter({ onFilterChange }) {
   return (
     <select onChange={handleChange}>
       <option value="">All</option>
-      {/* Ajoutez d'autres genres ici */}
-      <option value="action">Action</option>
-      <option value="drama">Drama</option>
-      <option value="comedy">Comedy</option>
+      {genres.map(genre => (
+        <option key={genre.id} value={genre.id}>
+          {genre.name}
+        </option>
+      ))}
     </select>
   );
 }
