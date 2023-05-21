@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import './css/SearchBar.css';
+
 
 function SearchBar({ setMovies }) {
   const [query, setQuery] = useState('');
@@ -12,14 +14,15 @@ function SearchBar({ setMovies }) {
   }, [query, setMovies]);
 
   return (
-    <div>
-      <input 
-        type="text" 
-        value={query} 
-        onChange={(e) => setQuery(e.target.value)} 
-        placeholder="Search..." 
-      />
-    </div>
+    <div className="search-bar">
+  <input 
+    className="search-input"
+    type="text" 
+    value={query} 
+    onChange={(e) => setQuery(e.target.value)} 
+    placeholder="Search..." 
+  />
+</div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './css/GenreFilter.css';
 
 function GenreFilter({ onFilterChange }) {
   const [genres, setGenres] = useState([]);
@@ -15,14 +16,14 @@ function GenreFilter({ onFilterChange }) {
   };
 
   return (
-    <select onChange={handleChange}>
-      <option value="">All</option>
-      {genres.map(genre => (
-        <option key={genre.id} value={genre.id}>
-          {genre.name}
-        </option>
-      ))}
-    </select>
+    <select className="genre-filter" onChange={handleChange}>
+    <option value="">Filtrer</option>
+    {genres.map(genre => (
+      <option key={genre.id} value={genre.id}>
+        {genre.name}
+      </option>
+    ))}
+  </select>
   );
 }
 

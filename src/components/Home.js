@@ -4,6 +4,7 @@ import GenreFilter from './GenreFilter';
 import { Card, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/Home.css';
 
 function Home() {
   const [movies, setMovies] = useState([]);
@@ -26,21 +27,26 @@ function Home() {
   };
 
   return (
-    <div>
-      <SearchBar setMovies={setMovies} />
-      <GenreFilter onFilterChange={handleGenreChange} />
+    <div className="home-container">
+    <div className="search-genre-bar">
+      <div className="search-bar">
+        <SearchBar setMovies={setMovies} />
+      </div>
+      <div className="genre-filter"> {/* Ajouter la classe genre-filter ici */}
+        <GenreFilter onFilterChange={handleGenreChange} />
+      </div>
+    </div>
 
-      <Row className="text-center mx-auto" >
+      <Row className="movie-container">
         {movies.map(movie => (
-          <Col md={2} key={movie.id}>
+          <Col md={2} sm={3} xs={6} key={movie.id} className="movie-card">
             <Link to={`/detail/${movie.id}`}>
-              <Card className="text-center mx-auto card text-bg-primary mb-3">
+              <Card className="text-center mx-auto mb-3">
                 <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
                 <Card.Body>
-                  <Card.Title className="text-center text-uppercase">{movie.title}</Card.Title>
+                  <Card.Title className="movie-title">{movie.title}</Card.Title>
                 </Card.Body>
               </Card>
-              <br></br>
             </Link>
           </Col>
         ))}

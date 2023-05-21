@@ -1,0 +1,40 @@
+/* Home.css */
+
+.home-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.search-genre-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.genre-filter {
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+}
+
+.movie-container {
+  justify-content: space-around;
+}
+
+.movie-card {
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+}
+
+.movie-title {
+  font-weight: bold;
+  color: #3498db;
+  font-size: 16px;
+}
