@@ -37,3 +37,32 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  background-color: #15202b;
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 100px; /* Ajout de marge à gauche du texte */
+  margin-right: 100px; /* Ajout de marge à droite du texte */
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar .nav-link {
+  margin-left: 15px;
+}
+
+.navbar .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}

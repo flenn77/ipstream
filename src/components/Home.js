@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import GenreFilter from './GenreFilter';
+import TopRatedMoviesPage from './TopRatedMoviesPage';
+
 import { Card, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,6 +30,7 @@ function Home() {
 
   return (
     <div className="home-container">
+     
     <div className="search-genre-bar">
       <div className="search-bar">
         <SearchBar setMovies={setMovies} />

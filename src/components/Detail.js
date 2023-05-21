@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import MovieModal from './MovieModal'; // Assurez-vous d'importer correctement le composant MovieModal
+import MovieModal from './MovieModal'; // Vérifiez le chemin d'importation du composant MovieModal
+import './css/Detail.css';
 
 function Detail() {
   const [movie, setMovie] = useState({});
@@ -20,24 +21,27 @@ function Detail() {
   const handleShow = () => setModalShow(true);
 
   return (
-    <div>
-      <h1>{movie.title}</h1>
-      <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
-      <p>{movie.overview}</p>
 
-      <Button variant="primary" onClick={handleShow}>
-        Voir plus de détails
-      </Button>
 
-      <Link to="/">
-        <Button variant="secondary" style={{ marginTop: '10px' }}>
-          Retour à la page d'accueil
-        </Button>
-      </Link>
 
-      <MovieModal movie={movie} show={modalShow} onHide={handleClose} />
-    </div>
+    <div className="detail-container">
+    <h1 className="detail-title">{movie.title}</h1>
+    <img className="detail-image" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+
+    <Button className="detail-button" variant="primary" onClick={handleShow}>
+      Voir plus de détails
+    </Button>
+
+    <Link to="/" className="detail-link">
+      Retour à la page d'accueil
+    </Link>
+
+    <MovieModal movie={movie} show={modalShow} onHide={handleClose} />
+  </div>
+
+
   );
 }
+
 
 export default Detail;

@@ -1,0 +1,37 @@
+.top-rated-movies-page {
+    padding: 20px;
+    background-color: #15202b; /* Couleur de fond */
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white; /* Couleur du texte */
+  }
+  
+  .movie-list {
+    margin-top: 20px;
+  }
+  
+  .movie-card {
+    margin-bottom: 20px;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white; /* Couleur du texte */
+  }
+  
+  .movie-overview {
+    font-size: 14px;
+    color: rgb(0, 0, 0); /* Couleur du texte */
+  }
+  
