@@ -20,7 +20,7 @@ function SearchBar({ setMovies }) {
     type="text" 
     value={query} 
     onChange={(e) => setQuery(e.target.value)} 
-    placeholder="Search..." 
+    placeholder="Trouver le film..." 
   />
 </div>
   );
