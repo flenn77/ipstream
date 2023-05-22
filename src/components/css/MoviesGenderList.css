@@ -72,3 +72,16 @@
     margin-bottom: 0;
   }
   
+
+  .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #15202b; /* Couleur de fond */
+  }
+  
+  .loading-gif {
+    width: 900px; /* Augmentez la taille du GIF selon vos besoins */
+    height: auto;
+  }

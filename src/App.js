@@ -6,6 +6,7 @@ import Detail from './components/Detail';
 import TopRatedMoviesPage from './components/TopRatedMoviesPage';
 import './App.css';
 import MoviesGenderList from './components/MoviesGenderList';
+import Favorites from './components/Favorites';
 
 
 
@@ -28,6 +29,9 @@ function App() {
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/GenderMovies">Films par genre</Nav.Link>
           </Nav>
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/favorites">favorites</Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
 
@@ -37,6 +41,8 @@ function App() {
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/top-rated" element={<TopRatedMoviesPage />} />
         <Route path="/GenderMovies" element={<MoviesGenderList />} />
+        <Route path="/favorites" element={<Favorites />} />
+
 
       </Routes>
     </Router>

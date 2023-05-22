@@ -42,9 +42,7 @@ function MoviesGenderList() {
   if (isLoading) {
     return (
       <div className="loading-container">
-        <Card className="loading-card">
-          <Card.Body className="loading-message">Chargement...</Card.Body>
-        </Card>
+        <img className="loading-gif" src="/loading.gif" alt="Chargement..." />
       </div>
     );
   }
