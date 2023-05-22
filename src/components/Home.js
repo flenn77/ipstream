@@ -8,21 +8,24 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Home.css';
 
+
+
 function Home() {
   const [movies, setMovies] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
     let url = 'https://api.themoviedb.org/3/movie/popular?api_key=64937e8ca9376b0baf3db4a6b1b7087f';
     if (selectedGenre) {
       url = `https://api.themoviedb.org/3/discover/movie?api_key=64937e8ca9376b0baf3db4a6b1b7087f&with_genres=${selectedGenre}`;
     }
-    url += `&page=${currentPage}`; // Ajoute le paramètre de pagination
+    url += `&page=${currentPage}`;
 
     fetch(url)
       .then(response => response.json())
-      .then(data => setMovies(prevMovies => [...prevMovies, ...data.results])) // Ajoute les nouveaux résultats à la liste existante
+      .then(data => setMovies(data.results))
       .catch(error => console.error(error));
   }, [selectedGenre, currentPage]);
 
@@ -31,13 +34,22 @@ function Home() {
     setCurrentPage(1); // Réinitialise la page lorsque le genre est modifié
   };
 
-  const handleLoadMore = () => {
-    setCurrentPage(prevPage => prevPage + 1); // Charge la page suivante
+ 
+
+  const handlePrevPage = () => {
+    setCurrentPage(prevPage => prevPage - 1);
   };
+
+  const handleNextPage = () => {
+    setCurrentPage(prevPage => prevPage + 1);
+  };
+
 
   return (
     <div className="home-container">
       <div className="search-genre-bar">
+        
+     
         <div className="search-bar">
           <SearchBar setMovies={setMovies} />
         </div>
@@ -61,11 +73,28 @@ function Home() {
         ))}
       </Row>
 
-      <div className="load-more-button">
-        <Button variant="primary" onClick={handleLoadMore}>Charger plus</Button>
+      <div className="pagination">
+        <Button
+          variant="primary"
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+          className="pagination-button"
+        >
+          Précédent
+        </Button>
+        <Button
+          variant="primary"
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+          className="pagination-button"
+        >
+          Suivant
+        </Button>
       </div>
+
     </div>
   );
 }
+
 
 export default Home;

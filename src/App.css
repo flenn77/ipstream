@@ -1,4 +1,4 @@
-
+/* 
 .App {
   text-align: center;
 }
@@ -47,9 +47,9 @@
   color: #fff;
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: 100px; /* Ajout de marge à gauche du texte */
-  margin-right: 100px; /* Ajout de marge à droite du texte */
-}
+  margin-left: 100px; /* Ajout de marge à gauche du texte 
+  margin-right: 100px; /* Ajout de marge à droite du texte 
+
 
 .navbar-brand {
   font-weight: bold;
@@ -65,4 +65,77 @@
 
 .navbar-collapse {
   justify-content: flex-end;
+} */
+
+.App {
+  text-align: center;
 }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom,rgba(0,0,0,0.7) 10%,rgba(0,0,0,0));
+  color: white;
+  padding: 20px 50px;
+}
+
+.navbar-logo {
+  height: 60px; /* Ajustez la hauteur du logo */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: #e50914;
+
+}
+
+.logo {
+  height: 36px;
+}
+

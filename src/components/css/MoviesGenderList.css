@@ -1,0 +1,74 @@
+  .custom-movies-gender-list-container {
+    padding: 20px;
+    background-color: #15202b;
+    color: #fff;
+  }
+
+  .custom-movies-gender-section {
+    margin-bottom: 20px;
+  }
+
+  .custom-movie-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .custom-movie-card {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    text-align: center;
+  }
+
+  .custom-movie-card .card-img-top {
+    width: 200px; /* Ajustez la taille de l'image selon vos besoins */
+    height: auto;
+    margin: auto; /* Centrer l'image */
+  }
+
+  .custom-movie-title {
+    font-size: 13px; /* Ajustez la taille du titre selon vos besoins */
+    word-break: break-word;
+    margin-top: 10px;
+    overflow: hidden; /* Masque le texte qui dépasse */
+    text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer du contenu supplémentaire */
+  }
+
+  .custom-genre-title {
+    font-size: 24px; /* Ajustez la taille du titre selon vos besoins */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff; /* Couleur du texte */
+  }
+
+  .custom-page-title {
+    font-size: 32px; /* Ajustez la taille du titre selon vos besoins */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* Couleur du texte */
+  }
+
+  .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .loading-card {
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+    background-color: #15202b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .loading-message {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  

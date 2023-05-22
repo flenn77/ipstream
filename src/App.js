@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Detail from './components/Detail';
 import TopRatedMoviesPage from './components/TopRatedMoviesPage';
 import './App.css';
+import MoviesGenderList from './components/MoviesGenderList';
 
 
 
@@ -12,22 +13,31 @@ function App() {
   return (
     <Router>
       <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand as={Link} to="/">Accueil</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">
+          <img src="/Ipstream.png" alt="Logo" className="navbar-logo" /> {/* Utilisez le chemin relatif de votre logo ici */}
+     
+        </Navbar.Brand>      
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/Home">Home</Nav.Link>
+          </Nav>
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/top-rated">Films les mieux notés</Nav.Link>
           </Nav>
           <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/top-rated">Films les mieux notés</Nav.Link>
+            <Nav.Link as={Link} to="/GenderMovies">Films par genre</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/Home" element={<Home/>} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/top-rated" element={<TopRatedMoviesPage />} />
+        <Route path="/GenderMovies" element={<MoviesGenderList />} />
+
       </Routes>
     </Router>
   );
