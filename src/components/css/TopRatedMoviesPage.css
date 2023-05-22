@@ -1,13 +1,13 @@
 .custom-top-rated-movies-page {
   padding: 20px;
-  background-color: #15202b; /* Couleur de fond */
+  background-color: #15202b;
 }
 
 .custom-page-title {
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
-  color: white; /* Couleur du texte */
+  color: white;
 }
 
 .custom-movie-list {
@@ -27,10 +27,10 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
-  color: rgb(0, 0, 0); /* Couleur du texte */
+  color: rgb(0, 0, 0);
 }
 
 .custom-movie-overview {
   font-size: 14px;  
-  color: #000; /* Couleur du texte */
+  color: #000;
 }

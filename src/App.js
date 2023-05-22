@@ -15,22 +15,22 @@ function App() {
     <Router>
       <Navbar bg="dark" variant="dark" expand="lg">
       <Navbar.Brand as={Link} to="/">
-          <img src="/Ipstream.png" alt="Logo" className="navbar-logo" /> {/* Utilisez le chemin relatif de votre logo ici */}
+          <img src="/Ipstream.png" alt="Logo" className="navbar-logo" />
      
         </Navbar.Brand>      
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/Home">Home</Nav.Link>
-          </Nav>
-          <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/top-rated">Films les mieux notés</Nav.Link>
+            <Nav.Link as={Link} to="/Home">Acceuil</Nav.Link>
           </Nav>
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/GenderMovies">Films par genre</Nav.Link>
           </Nav>
           <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/favorites">favorites</Nav.Link>
+            <Nav.Link as={Link} to="/top-rated">Films les mieux notés</Nav.Link>
+          </Nav>
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/favorites">Favoris</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

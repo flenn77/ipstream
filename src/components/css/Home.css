@@ -1,9 +1,9 @@
 
 
-/* Home.css */
+
 .home-container {
   padding: 2rem;
-    background-color: #15202b; /* Couleur de fond */
+    background-color: #15202b;
 
 }
 
@@ -22,7 +22,7 @@
 }
 
 .genre-filter {
-  width: 200px; /* Ajustez la largeur selon vos besoins */
+  width: 200px;
 }
 
 .movie-container {

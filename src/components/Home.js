@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import GenreFilter from './GenreFilter';
-import TopRatedMoviesPage from './TopRatedMoviesPage';
+
 
 import { Card, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
+  const [totalPages] = useState(0);
 
   useEffect(() => {
     let url = 'https://api.themoviedb.org/3/movie/popular?api_key=64937e8ca9376b0baf3db4a6b1b7087f';
@@ -31,7 +31,7 @@ function Home() {
 
   const handleGenreChange = (genre) => {
     setSelectedGenre(genre);
-    setCurrentPage(1); // Réinitialise la page lorsque le genre est modifié
+    setCurrentPage(1);
   };
 
  

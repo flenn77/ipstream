@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Row, Col } from 'react-bootstrap';
-import './css/MoviesGenderList.css'; // Importer le fichier de style personnalisé
+import { Card } from 'react-bootstrap';
+import './css/MoviesGenderList.css';
 
 function MoviesGenderList() {
   const [genres, setGenres] = useState([]);
@@ -9,7 +9,7 @@ function MoviesGenderList() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Récupérer la liste des genres
+
     fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=64937e8ca9376b0baf3db4a6b1b7087f')
       .then(response => response.json())
       .then(data => setGenres(data.genres))
@@ -17,7 +17,7 @@ function MoviesGenderList() {
   }, []);
 
   useEffect(() => {
-    // Récupérer les films pour chaque genre
+
     const fetchMoviesByGenre = async (genreId) => {
       const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=64937e8ca9376b0baf3db4a6b1b7087f&with_genres=${genreId}`);
       const data = await response.json();
@@ -31,12 +31,12 @@ function MoviesGenderList() {
         genreMoviesData.push({ genre, movies });
       }
       setGenreMovies(genreMoviesData);
-      setIsLoading(false); // Fin du chargement, affichage de la liste des films
+      setIsLoading(false);
     };
 
     setTimeout(() => {
       fetchData();
-    }, 2000); // Temporisation de 2 secondes avant de charger les données
+    }, 2000);
   }, [genres]);
 
   if (isLoading) {

@@ -22,31 +22,31 @@
   }
 
   .custom-movie-card .card-img-top {
-    width: 200px; /* Ajustez la taille de l'image selon vos besoins */
+    width: 200px;
     height: auto;
-    margin: auto; /* Centrer l'image */
+    margin: auto;
   }
 
   .custom-movie-title {
-    font-size: 13px; /* Ajustez la taille du titre selon vos besoins */
+    font-size: 13px;
     word-break: break-word;
     margin-top: 10px;
-    overflow: hidden; /* Masque le texte qui dépasse */
-    text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer du contenu supplémentaire */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .custom-genre-title {
-    font-size: 24px; /* Ajustez la taille du titre selon vos besoins */
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #fff; /* Couleur du texte */
+    color: #fff;
   }
 
   .custom-page-title {
-    font-size: 32px; /* Ajustez la taille du titre selon vos besoins */
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #fff; /* Couleur du texte */
+    color: #fff;
   }
 
   .loading-container {
@@ -78,10 +78,10 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #15202b; /* Couleur de fond */
+    background-color: #15202b;
   }
   
   .loading-gif {
-    width: 900px; /* Augmentez la taille du GIF selon vos besoins */
+    width: 900px;
     height: auto;
   }

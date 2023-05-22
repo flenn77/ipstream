@@ -7,7 +7,6 @@
   border: none;
   border-radius: 4px;
   font-size: 18px;
-  /* Ajouter la propriété pour augmenter la largeur */
   max-width: 100%;
   
 }
@@ -22,7 +21,6 @@
   color: #333333;
 }
 
-/* Style pour la flèche du sélecteur (uniquement pour certains navigateurs) */
 .genre-filter::-ms-expand {
   display: none;
 }
