@@ -23,7 +23,7 @@ function App() {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/Home">Acceuil</Nav.Link>
+            <Nav.Link as={Link} to="/Home">Accueil</Nav.Link>
           </Nav>
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/GenderMovies">Films par genre</Nav.Link>
